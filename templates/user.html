@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block customcss %}
+<link rel='stylesheet' type='text/css' href="{% static 'css/user.css' %}">
+{% endblock customcss %}
+
+{% block title %}
+   <title>マイページ</title>
+{% endblock title %}
+
+{% block header %}
+<div class='head'>
+  <div class="container">
+    <div class='head-left'>
+      <h4><a href='{% url 'user' %}'style="text-decoration:none; color:#EEEEEE;">NU Libray</a></h4>
+    </div>
+    <div class='head-right'>
+      <a href="{% url 'update' %}" class="btn btn-light my-2 btn2">授業を編集</a>
+      <a href="{% url 'logout' %}" class="btn btn-light my-2 btn2">ログアウト</a>
+    </div>
+  </div>
+</div>
+{% endblock header %}
+
+{% block content %}
+<div class='container'>
+  <div class="top-wrapper">
+    <h3>{{user.username}}</h3>
+  </div>
+</div>
+<div class="container">
+  <div class='wrapper'>
+    <div class="row">
+      {% if 月１ != NULL %}
+        <div class="col-sm alert alert-primary">
+          <a href="{% url 'detail' name=月１ %}">{{ 月１ }}</a>
+        </div>
+      {% else %}
+        <div class="col-sm alert">
+        </div>
+      {% endif %}
+
+      {% if 火１ != NULL %}
+        <div class="col-sm alert alert-primary">
+          <a href="{% url 'detail' name=火１ %}">{{ 火１ }}</a>
+        </div>
+      {% else %}
+        <div class="col-sm alert">
+        </div>
+      {% endif %}
+
+      {% if 水１ != NULL %}
+        <div class="col-sm alert alert-primary">
+          <a href="{% url 'detail' name=水１ %}">{{ 水１ }}</a>
+        </div>
+      {% else %}
+        <div class="col-sm alert">
+        </div>
+      {% endif %}
+
+      {% if 木１ != NULL %}
+        <div class="col-sm alert alert-primary">
+          <a href="{% url 'detail' name=木１ %}">{{ 木１ }}</a>
+        </div>
+      {% else %}
+        <div class="col-sm alert">
+        </div>
+      {% endif %}
+
+      {% if 金１ != NULL %}
+        <div class="col-sm alert alert-primary">
+          <a href="{% url 'detail' name=金１ %}">{{ 金１ }}</a>
+        </div>
+      {% else %}
+        <div class="col-sm alert">
+        </div>
+      {% endif %}
+  </div>
+
+  <div class="row">
+    {% if 月２ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=月２ %}">{{ 月２ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 火２ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=火２ %}">{{ 火２ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 水２ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=水２ %}">{{ 水２ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 木２ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=木２ %}">{{ 木２ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 金２ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=金２ %}">{{ 金２ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="row">
+    {% if 月３ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=月３ %}">{{ 月３ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 火３ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=火３ %}">{{ 火３ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 水３ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=水３ %}">{{ 水３ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 木３ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=木３ %}">{{ 木３ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 金３ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=金３ %}">{{ 金３ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="row">
+    {% if 月４ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=月４ %}">{{ 月４ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 火４ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=火４ %}">{{ 火４ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 水４ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=水４ %}">{{ 水４ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 木４ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=木４ %}">{{ 木４ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 金４ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=金４ %}">{{ 金４ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="row">
+    {% if 月５ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=月５ %}">{{ 月５ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 火５ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=火５ %}">{{ 火５ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 水５ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=水５ %}">{{ 水５ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 木５ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=木５ %}">{{ 木５ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+
+    {% if 金５ != NULL %}
+      <div class="col-sm alert alert-primary">
+        <a href="{% url 'detail' name=金５ %}">{{ 金５ }}</a>
+      </div>
+    {% else %}
+      <div class="col-sm alert">
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock content %}

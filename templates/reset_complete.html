@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block customcss %}
+<link rel='stylesheet' type='text/css' href="{% static 'css/login.css' %}">
+{% endblock customcss %}
+
+{% block title %}
+<title>パスワードリセット完了</title>
+{% endblock title %}
+
+{% block content %}
+<div class='container'>
+  <div class = 'cont'>
+    <form class="form-signin" method="POST" action=''> {% csrf_token %}
+      <h1 class="h3 mb-3 font-weight-normal">パスワードリセット</h1>
+      <label for="inputEmail" class="sr-only">Password</label>
+      <input type="text" id="inputPassword" class="form-control" name="password" placeholder="新しいパスワード" required autofocus>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">送信</button>
+    </form>
+  </div>
+</div>
+{% endblock content %}

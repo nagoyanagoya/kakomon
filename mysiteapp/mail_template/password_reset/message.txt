@@ -1,0 +1,5 @@
+下記URLよりサイトにアクセスの上、パスワードの変更を行ってください。
+URLの有効期限は24時間以内になっています。
+
+パスワードリセット用URL
+{{ protocol }}://{{ domain }}{% url 'reset_confirm' uidb64=uid token=token %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block customcss %}
+<link rel='stylesheet' type='text/css' href="{% static 'css/user.css' %}">
+{% endblock customcss %}
+
+{% block title %}
+   <title>{{name}}</title>
+{% endblock title %}
+
+{% block header %}
+<div class='head'>
+  <div class="container">
+    <div class='head-left'>
+      <h4><a href='{% url 'user' %}'style="text-decoration:none; color:#EEEEEE;">NU Libray</a></h4>
+    </div>
+    <div class='head-right'>
+      <a href="{% url 'upload' name %}" class="btn btn-light my-2 btn2">過去問を追加</a>
+      <a href="{% url 'logout' %}" class="btn btn-light my-2 btn2">ログアウト</a>
+    </div>
+  </div>
+</div>
+{% endblock header %}
+
+{% block content %}
+<div class='container'>
+  <div class='top-wrapper'>
+    <h3>{{name}}</h3>
+  </div>
+</div>
+<div class='container'>
+  <div class='middle-wrapper'>
+    <div class="hidden_box">
+    <input type="checkbox" id="label1" />
+    <label for="label1">過去問</label>
+    {% for i in year %}
+        <div class="hidden_show">
+          <div class="hidden_box">
+            <input type="checkbox" id="label1" />
+            <h5>{{i}}</h5>
+            {% for item in image %}
+            {% if i == item.year %}
+            {% if user == item.author %}
+            <p><a href="javascript:void(0);" onclick="var ok=confirm('本当に削除しますか？');
+              if (ok) location.href='{% url 'delete' name item.pk %}'; return false;" class="btn btn-danger my-2 delete">削除</a></p>
+            {% endif %}
+            {% if item.page == 1 %}
+              {% if item.when == 1 %}
+                <div class='when'>中間</div>
+              {% else %}
+                <div class='when'>期末</div>
+              {% endif %}
+            {% endif %}
+            <img src='{{item.image.url}}' calss='image' width=100%>
+            {% endif %}
+            {% endfor %}
+            </div>
+          </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

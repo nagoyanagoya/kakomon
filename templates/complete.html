@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block customcss %}
+<link rel='stylesheet' type='text/css' href="{% static 'css/user.css' %}">
+{% endblock customcss %}
+
+{% block title %}
+   <title>登録完了</title>
+{% endblock title %}
+
+{% block header %}
+
+{% endblock header %}
+
+{% block content %}
+<div class='contaier'>
+  <div class='message-wrapper'>
+  <p>
+    本登録が完了しました。<br>
+    登録されたメールアドレスとパスワードでログインしてください。<br>
+    <a class="btn btn-primary btn-lg" href="{% url 'login' %}">ログイン</a>
+  </p>
+  </div>
+</div>
+{% endblock %}

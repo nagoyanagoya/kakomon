@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block customcss %}
+<link rel='stylesheet' type='text/css' href="{% static 'css/user.css' %}">
+{% endblock customcss %}
+
+{% block title %}
+   <title>アップロード</title>
+{% endblock title %}
+
+{% block header %}
+<div class='head'>
+  <div class="container">
+    <div class='head-left'>
+      <h4><a href='{% url 'user' %}'style="text-decoration:none; color:#EEEEEE;">NU Libray</a></h4>
+    </div>
+    <div class='head-right'>
+      <a href="{% url 'logout' %}" class="btn btn-light my-2 btn2">ログアウト</a>
+    </div>
+  </div>
+</div>
+{% endblock header %}
+
+{% block content %}
+<div class='container'>
+  <div class='top-wrapper'>
+    <h3>{{name}}</h3>
+    <p>複数枚ある場合は１枚ずつ追加するようお願いします</p>
+  </div>
+  <div class='wrapper'>
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+      <div class='form'>
+        <label for="inputYear" class="sr-only">Year</label>
+        <p>年度を入力してください(半角)</p>
+        <input type="text" name="year" placeholder="ex)2020" required autofocus>
+      </div>
+      <div class='form'>
+        <label for="inputWhen" class="sr-only">Year</label>
+        <p>中間か期末を選択してください</p>
+        <select name="when" size='1' required>
+          <option value="1">中間</option>
+          <option value="2">期末</option>
+        </select>
+      </div>
+      <div class='form'>
+        <p>画像ファイルを添付してください。(jpeg,png)</p>
+        <input type="file" name="image" accept='image/jpeg,image/png' required>
+      </div>
+      <div class='form'>
+        <label for="inputPage" class="sr-only">Page</label>
+        <p>ページ数を入力してください(半角)</p>
+        <input type="text" name="page" placeholder="ex)1" required>
+      </div>
+      <input type="submit" value="追加">
+    </form>
+  </div>
+</div>
+{% endblock %}

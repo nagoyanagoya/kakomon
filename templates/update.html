@@ -1,0 +1,371 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block customcss %}
+<link rel='stylesheet' type='text/css' href="{% static 'css/user.css' %}">
+{% endblock customcss %}
+
+{% block title %}
+<title>ユーザー情報更新</title>
+{% endblock title %}
+
+{% block header %}
+<div class='head'>
+  <div class="container">
+    <div class='head-left'>
+      <h4><a href='{% url 'user' %}'style="text-decoration:none; color:#EEEEEE;">NU Libray</a></h4>
+    </div>
+    <div class='head-right'>
+      <a href="{% url 'logout' %}" class="btn btn-light my-2 btn2">ログアウト</a>
+    </div>
+  </div>
+</div>
+{% endblock header %}
+
+
+{% block content %}
+<div class="container">
+  <div class='top-wrapper'>
+    <form method="POST">{% csrf_token %}
+        <div class="row">
+
+          {% if 月１ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 月１ in subject %}
+                <p><input type="checkbox" name="subject" value="{{ 月１ }}" checked> {{ 月１ }}</p>
+              {% else %}
+                <p><input type="checkbox" name="subject" value="{{ 月１ }}"> {{ 月１ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 火１ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 火１ in subject %}
+                <p><input type="checkbox" name="subject" value="{{ 火１ }}" checked> {{ 火１ }}</p>
+              {% else %}
+                <p><input type="checkbox" name="subject" value="{{ 火１ }}"> {{ 火１ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 水１ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 水１ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 水１ }}" checked> {{ 水１ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 水１ }}"> {{ 水１ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 木１ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 木１ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 木１ }}" checked> {{ 木１ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 木１ }}"> {{ 木１ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 金１ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 金１ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 金１ }}" checked> {{ 金１ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 金１ }}"> {{ 金１ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+        </div>
+        <div class="row">
+          {% if 月２ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 月２ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 月２ }}" checked> {{ 月２ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 月２ }}"> {{ 月２ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 火２ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 火２ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 火２ }}" checked> {{ 火２ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 火２ }}"> {{ 火２ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 水２ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 水２ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 水２ }}" checked> {{ 水２ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 水２ }}"> {{ 水２ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 木２ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 木２ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 木２ }}" checked> {{ 木２ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 木２ }}"> {{ 木２ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 金２ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 金２ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 金２ }}" checked> {{ 金２ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 金２ }}"> {{ 金２ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+        </div>
+
+        <div class="row">
+          {% if 月３ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 月３ in subject %}
+                <p><input type="checkbox" name="subject" value="{{ 月３ }}" checked> {{ 月３ }}</p>
+              {% else %}
+                <p><input type="checkbox" name="subject" value="{{ 月３ }}"> {{ 月３ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 火３ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 火３ in subject %}
+                <p><input type="checkbox" name="subject" value="{{ 火３}}" checked> {{ 火３ }}</p>
+              {% else %}
+                <p><input type="checkbox" name="subject" value="{{ 火３ }}"> {{ 火３ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 水３ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 水３ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 水３ }}" checked> {{ 水３ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 水３ }}"> {{ 水３ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 木３ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 木３ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 木３ }}" checked> {{ 木３ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 木３ }}"> {{ 木３ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 金３ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 金３ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 金３ }}" checked> {{ 金３ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 金３ }}"> {{ 金３ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="row">
+          {% if 月４ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 月４ in subject %}
+                <p><input type="checkbox" name="subject" value="{{ 月４ }}" checked> {{ 月４ }}</p>
+              {% else %}
+                <p><input type="checkbox" name="subject" value="{{ 月４ }}"> {{ 月４ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 火４ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 火４ in subject %}
+                <p><input type="checkbox" name="subject" value="{{ 火４ }}" checked> {{ 火４ }}</p>
+              {% else %}
+                <p><input type="checkbox" name="subject" value="{{ 火４ }}"> {{ 火４ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 水４ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 水４ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 水４ }}" checked> {{ 水４ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 水４ }}"> {{ 水４ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 木４ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 木４ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 木４ }}" checked> {{ 木４ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 木４ }}"> {{ 木４ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 金４ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 金４ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 金４ }}" checked> {{ 金４ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 金４ }}"> {{ 金４ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="row">
+          {% if 月５ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 月５ in subject %}
+                <p><input type="checkbox" name="subject" value="{{ 月５ }}" checked> {{ 月５ }}</p>
+              {% else %}
+                <p><input type="checkbox" name="subject" value="{{ 月５ }}"> {{ 月５ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 火５ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 火５ in subject %}
+                <p><input type="checkbox" name="subject" value="{{ 火５ }}" checked> {{ 火５ }}</p>
+              {% else %}
+                <p><input type="checkbox" name="subject" value="{{ 火５ }}"> {{ 火５ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 水５ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 水５ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 水５ }}" checked> {{ 水５ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 水５ }}"> {{ 水５ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 木５ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 木５ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 木５ }}" checked> {{ 木５ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 木５ }}"> {{ 木５ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+
+          {% if 金５ != NULL %}
+            <div class="col-sm alert alert-primary">
+              {% if 金５ in subject %}
+              <p><input type="checkbox" name="subject" value="{{ 金５ }}" checked> {{ 金５ }}</p>
+            {% else %}
+              <p><input type="checkbox" name="subject" value="{{ 金５ }}"> {{ 金５ }}</p>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="col-sm alert alert">
+            </div>
+          {% endif %}
+        </div>
+
+      <input type="submit" value="更新">
+    </form>
+  </div>
+</div>
+{% endblock content %}
