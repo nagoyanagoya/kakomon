@@ -1,0 +1,123 @@
+html,
+body {
+height: 100%;
+}
+
+.head {
+  height: 60px;
+  background-color: #555555;
+  padding-top:15px;
+  position: relative;
+}
+
+.head-left {
+  position:absolute;
+  left:15px;
+}
+
+.head-right {
+  position:absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.btn {
+  margin-left:5px;
+}
+
+.top-wrapper {
+  margin-top:20px;
+  height:50px;
+  position:relative;
+}
+
+.top-wrapper h2 {
+  text-align: center;
+}
+
+.wrapper {
+  margin-top:30px;
+}
+
+.alert-primary {
+  background-color: white;
+}
+
+.hidden_box {
+    margin: 2em 0;
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden_box label {
+    padding: 15px;
+    font-weight: 500;
+    background: #C2EEFF;
+    border-radius: 5px;
+    cursor :pointer;
+    transition: .5s;
+}
+
+/*アイコンを表示*/
+.hidden_box label:before {
+    display: inline-block;
+    content: '\f078';
+    font-family: 'FontAwesome';
+    padding-right: 5px;
+    /*transition: 0.2s;*/
+}
+
+/*ボタンホバー時*/
+/*.hidden_box label:hover {
+    background: #A7F1FF;
+}*/
+
+/*アイコンを切り替え*/
+/*.hidden_box input:checked ~ label:before {
+     content: '\f106';
+     -webkit-transform: rotate(180deg);
+     transform: rotate(180deg);
+}*/
+
+/*チェックは見えなくする*/
+.hidden_box input {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+/*.hidden_box .hidden_show {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}*/
+
+/*クリックで中身表示*/
+/*.hidden_box input:checked ~ .hidden_show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}*/
+
+.hidden_show {
+  padding-bottom:50px;
+}
+
+.form {
+  margin-bottom:20px;
+}
+
+.delete {
+  float:right;
+}
+
+.when {
+  text-align: center;
+  padding:5px;
+  font-weight: 400;
+  width:70px;
+  height:30px;
+  background: #DDFFFF;
+  border-radius: 5px;
+}
